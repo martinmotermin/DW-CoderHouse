@@ -1,0 +1,18 @@
+//BASE
+@import 'base/reset';
+
+// UTILS
+@import 'utils/mixins';
+@import 'utils/variables';
+
+// LAYOUT
+@import 'layout/header';
+@import 'layout/footer';
+
+// PAGES
+@import 'pages/home';
+@import 'pages/catalogue';
+@import 'pages/brands';
+@import 'pages/about';
+@import 'pages/contact';
+
