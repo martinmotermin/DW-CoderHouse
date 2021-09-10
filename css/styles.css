@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 *,
 *:before,
 *:after {
@@ -187,3 +188,112 @@
   height: 100vh;
   background: #DADDE2;
   padding: 0; }
+
+.infoOferts {
+  position: relative;
+  margin-top: 20px;
+  min-height: 700px;
+  max-height: 700px;
+  background: #000;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url(../../assets/ofertsBg.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column; }
+  .infoOferts .ofert {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    text-align: center; }
+    .infoOferts .ofert h1 {
+      font-size: clamp(4.5rem, 5vw, 6rem);
+      font-weight: bolder;
+      margin-bottom: 20px;
+      color: transparent;
+      opacity: 0.8;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-size: 500%;
+      -webkit-background-size: 500%;
+      animation: animate 5s linear infinite;
+      background-image: linear-gradient(to left, #3F1D3F, #B17AB5, #E7A623); }
+
+@keyframes animate {
+  0% {
+    background-position: 0 100%; }
+  50% {
+    background-position: 100% 0; }
+  100% {
+    background-position: 0 100%; } }
+    .infoOferts .ofert h3 {
+      font-size: 1.5rem;
+      color: #f3f3f3;
+      opacity: 0.9;
+      text-transform: uppercase; }
+  .infoOferts .btnContainer .draw-border {
+    box-shadow: inset 0 0 0 4px #55BAC0;
+    color: #55BAC0;
+    transition: color 0.25s 0.08333s;
+    position: relative; }
+    .infoOferts .btnContainer .draw-border::before, .infoOferts .btnContainer .draw-border::after {
+      border: 0 solid transparent;
+      box-sizing: border-box;
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: 0;
+      right: 0; }
+    .infoOferts .btnContainer .draw-border::before {
+      border-bottom-width: 4px;
+      border-left-width: 4px; }
+    .infoOferts .btnContainer .draw-border::after {
+      border-top-width: 4px;
+      border-right-width: 4px; }
+    .infoOferts .btnContainer .draw-border:hover {
+      color: #ffe593; }
+      .infoOferts .btnContainer .draw-border:hover::before, .infoOferts .btnContainer .draw-border:hover::after {
+        border-color: #ffe593;
+        transition: border-color 0s, width 0.25s, height 0.25s;
+        width: 100%;
+        height: 100%; }
+      .infoOferts .btnContainer .draw-border:hover::before {
+        transition-delay: 0s, 0s, 0.25s; }
+      .infoOferts .btnContainer .draw-border:hover::after {
+        transition-delay: 0s, 0.25s, 0s; }
+  .infoOferts .btnContainer button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+    font: "Roboto", sans-serif;
+    font-weight: bold;
+    padding: 1em 2em;
+    letter-spacing: 0.05rem;
+    font-size: 1rem; }
+    .infoOferts .btnContainer button a {
+      text-decoration: none;
+      color: #55BAC0; }
+  .infoOferts .btnContainer button:focus {
+    outline: 2px dotted #55BAC0; }
+  .infoOferts .btnContainer button:hover a {
+    color: #ffe593; }
+
+@media screen and (min-width: 992px) {
+  .infoOferts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row; }
+    .infoOferts .btnContainer {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 80px; } }
