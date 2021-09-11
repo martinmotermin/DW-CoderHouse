@@ -97,6 +97,68 @@
     }
 }
 
+.homeNosotros {
+    background: #fff;
+    margin-top: 15px;
+    padding: 75px 0;
+
+    .homeNosotros__text{
+
+        h2 {
+            font-family: $mont-font;
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        h6 {
+            font-family: $poppins-font;
+            font-size: 1rem;
+        }
+
+        .homeNosotros__btn {
+            background: transparent;
+            margin-top: 40px;
+            outline: none;
+            border: none;
+            border: solid 1px #3B3B3B;
+            padding: 15px 25px;
+            display: inline-block;
+            font-family: $roboto-font;
+            font-weight: bold;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: inset 15px 0 0 0 #E7A623;
+            transition: ease-out .4s;
+
+            a {
+                text-decoration: none;
+                color: #3B3B3B;
+                text-transform: uppercase;
+
+                i {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .homeNosotros__btn:hover {
+            box-shadow: inset 400px 0 0 0 #E7A623;
+        }
+    }
+
+    .homeNosotros__logo {
+        min-width: 250px;
+        min-height: 300px;
+        width: 400px;
+        height: 500px;
+        background: url(../../assets/Logo-sin-fondo/Isologotipo-04-cortado.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-bottom: 30px;
+        border-radius: 5px;
+    }
+}
+
 
 // MEDIA QUERYS
 
@@ -110,6 +172,11 @@
             bottom: 0;
             margin-bottom: 80px;
         }
+    }
+
+    .homeNosotros__container {
+        @include flex(space-between, row-reverse, center);
+
     }
 }
 
