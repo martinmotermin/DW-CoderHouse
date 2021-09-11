@@ -113,11 +113,11 @@
     background-size: cover;
     background-repeat: no-repeat; }
   .headerSlider .carousel .carousel-inner .slide1 {
-    background-image: url(../../assets/slide1.jpg); }
+    background-image: url(../assets/slide1.jpg); }
   .headerSlider .carousel .carousel-inner .slide2 {
-    background-image: url(../../assets/slide2.jpg); }
+    background-image: url(../assets/slide2.jpg); }
   .headerSlider .carousel .carousel-inner .slide3 {
-    background-image: url(../../assets/slide3.jpg); }
+    background-image: url(../assets/slide3.jpg); }
 
 .headerInfo {
   margin-top: 10px;
@@ -253,7 +253,7 @@
   min-height: 700px;
   max-height: 700px;
   background: #000;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url(../../assets/ofertsBg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url(../assets/ofertsBg.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -348,7 +348,7 @@
 .homeNosotros {
   position: relative;
   padding: 75px 0;
-  background: url(../../assets/homeNosotrosBg.svg) no-repeat;
+  background: url(../assets/homeNosotrosBg.svg) no-repeat;
   background-position: center;
   background-size: cover; }
   .homeNosotros .homeNosotros__text h2 {
@@ -389,7 +389,7 @@
   .homeNosotros .homeNosotros__logo {
     min-width: 250px;
     min-height: 300px;
-    background: url(../../assets/Logo-sin-fondo/Isologotipo-04-cortado.png) no-repeat;
+    background: url(../assets/Logo-sin-fondo/Isologotipo-04-cortado.png) no-repeat;
     background-size: contain;
     background-position: center;
     margin-bottom: 30px;

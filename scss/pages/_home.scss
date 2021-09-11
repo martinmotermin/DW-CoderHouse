@@ -14,7 +14,7 @@
         rgba(0,0,0,0.3),
         rgba(0,0,0,0.8)
         ),
-        url(../../assets/ofertsBg.jpg);
+        url(../assets/ofertsBg.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -100,7 +100,7 @@
 .homeNosotros {
     position: relative;
     padding: 75px 0;
-    background: url(../../assets/homeNosotrosBg.svg) no-repeat;
+    background: url(../assets/homeNosotrosBg.svg) no-repeat;
     background-position: center;
     background-size: cover;
 
@@ -164,7 +164,7 @@
     .homeNosotros__logo {
         min-width: 250px;
         min-height: 300px;
-        background: url(../../assets/Logo-sin-fondo/Isologotipo-04-cortado.png) no-repeat;
+        background: url(../assets/Logo-sin-fondo/Isologotipo-04-cortado.png) no-repeat;
         background-size: contain;
         background-position: center;
         margin-bottom: 30px;
