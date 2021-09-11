@@ -98,15 +98,21 @@
 }
 
 .homeNosotros {
-    background: #fff;
-    margin-top: 15px;
+    position: relative;
     padding: 75px 0;
+    background: url(../../assets/homeNosotrosBg.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
 
     .homeNosotros__text{
 
         h2 {
             font-family: $mont-font;
             font-size: clamp(2rem, 5vw, 3rem);
+
+            span {
+                color: $orange-color;
+            }
         }
 
         h6 {
@@ -120,6 +126,7 @@
             outline: none;
             border: none;
             border: solid 1px #3B3B3B;
+            border-radius: 5px;
             padding: 15px 25px;
             display: inline-block;
             font-family: $roboto-font;
@@ -127,7 +134,7 @@
             font-size: 1rem;
             letter-spacing: 1px;
             cursor: pointer;
-            box-shadow: inset 15px 0 0 0 #E7A623;
+            box-shadow: inset 15px 0 0 0 #00CF97;
             transition: ease-out .4s;
 
             a {
@@ -137,26 +144,99 @@
 
                 i {
                     margin-left: 10px;
+                    color: $orange-color;
                 }
             }
         }
 
         .homeNosotros__btn:hover {
-            box-shadow: inset 400px 0 0 0 #E7A623;
+            box-shadow: inset 400px 0 0 0 #00CF97;
+
+            a {
+
+                i {
+                    color: #3B3B3B;
+                }
+            }
         }
     }
 
     .homeNosotros__logo {
         min-width: 250px;
         min-height: 300px;
-        width: 400px;
-        height: 500px;
         background: url(../../assets/Logo-sin-fondo/Isologotipo-04-cortado.png) no-repeat;
         background-size: contain;
         background-position: center;
         margin-bottom: 30px;
         border-radius: 5px;
     }
+}
+
+.homeNewsLetter {
+    @include flex(space-around, column, center);
+    padding: 20px 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    background: #f3f3f3;
+    border-bottom: 2px solid $orange-color;
+
+    .hNUpTitle,
+    .hNSubTitle {
+        font-family: $poppins-font;
+        font-size: 1.2rem;
+        color: #727171;
+    }
+
+    .hNTitle {
+        font-size: clamp(3rem, 5vw, 3.4rem);
+        color: #3B3B3B;
+        font-weight: bold;
+        font-family: $mont-font;
+    }
+
+    .hNSubTitle {
+
+        span {
+            color: black;
+            letter-spacing: 2px;
+        }
+    }
+
+    .hNForm {
+        margin-top: 30px;
+        
+        input {
+            width: 250px;
+            margin-bottom: 25px;
+            font-family: $poppins-font;
+        }
+
+        .btn {
+            background: transparent;
+            margin-top: 20px;
+            outline: none;
+            border: none;
+            border: solid 1px #3B3B3B;
+            border-radius: 5px;
+            padding: 15px 25px;
+            display: inline-block;
+            font-family: $roboto-font;
+            font-weight: bold;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: inset 15px 0 0 0 $orange-color;
+            transition: ease-out .4s;
+            width: 175px;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            box-shadow: inset 400px 0 0 0 $orange-color;
+            color: #f3f3f3;
+        }
+    }
+
 }
 
 
@@ -177,6 +257,29 @@
     .homeNosotros__container {
         @include flex(space-between, row-reverse, center);
 
+        .homeNosotros__logo {
+            width: 400px;
+            height: 500px;
+        }
+
+    }
+
+    .homeNewsLetter {
+        
+        .hNUpTitle {
+            margin-top: 50px;
+        }
+        
+        .hNForm {
+
+            input {
+                width: 400px;
+            }
+
+            .btn {
+                margin-top: 40px;
+            }
+        }
     }
 }
 

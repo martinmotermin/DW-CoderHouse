@@ -184,6 +184,64 @@
     .headerInfo .infoItems .item {
       max-height: 126px; } }
 
+.footer {
+  background: #fff;
+  padding-bottom: 20px; }
+  .footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column; }
+    .footer .container .locationInfo {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      color: black;
+      letter-spacing: 1px; }
+      .footer .container .locationInfo iframe {
+        width: 250px;
+        margin-bottom: 15px; }
+    .footer .container .socialMedia {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      width: 280px; }
+      .footer .container .socialMedia a {
+        text-decoration: none;
+        color: #3B3B3B; }
+        .footer .container .socialMedia a i {
+          font-size: 2rem;
+          cursor: pointer;
+          transition: all .2s ease; }
+      .footer .container .socialMedia a:hover i {
+        font-size: 2.3rem;
+        color: #D64E3D; }
+    .footer .container .footerLogo {
+      margin: 20px 0; }
+      .footer .container .footerLogo img {
+        width: 233px; }
+
+@media screen and (min-width: 992px) {
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; }
+    .footer .container .locationInfo {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row; }
+      .footer .container .locationInfo iframe {
+        margin-right: 20px; }
+    .footer .container .socialMedia i {
+      margin-left: 20px; } }
+
 .primary-container {
   height: 100vh;
   background: #DADDE2;
@@ -288,12 +346,16 @@
     color: #ffe593; }
 
 .homeNosotros {
-  background: #fff;
-  margin-top: 15px;
-  padding: 75px 0; }
+  position: relative;
+  padding: 75px 0;
+  background: url(../../assets/homeNosotrosBg.svg) no-repeat;
+  background-position: center;
+  background-size: cover; }
   .homeNosotros .homeNosotros__text h2 {
     font-family: "Montserrat", sans-serif;
     font-size: clamp(2rem, 5vw, 3rem); }
+    .homeNosotros .homeNosotros__text h2 span {
+      color: #D64E3D; }
   .homeNosotros .homeNosotros__text h6 {
     font-family: "Poppins", sans-serif;
     font-size: 1rem; }
@@ -303,6 +365,7 @@
     outline: none;
     border: none;
     border: solid 1px #3B3B3B;
+    border-radius: 5px;
     padding: 15px 25px;
     display: inline-block;
     font-family: "Roboto", sans-serif;
@@ -310,26 +373,78 @@
     font-size: 1rem;
     letter-spacing: 1px;
     cursor: pointer;
-    box-shadow: inset 15px 0 0 0 #E7A623;
+    box-shadow: inset 15px 0 0 0 #00CF97;
     transition: ease-out .4s; }
     .homeNosotros .homeNosotros__text .homeNosotros__btn a {
       text-decoration: none;
       color: #3B3B3B;
       text-transform: uppercase; }
       .homeNosotros .homeNosotros__text .homeNosotros__btn a i {
-        margin-left: 10px; }
+        margin-left: 10px;
+        color: #D64E3D; }
   .homeNosotros .homeNosotros__text .homeNosotros__btn:hover {
-    box-shadow: inset 400px 0 0 0 #E7A623; }
+    box-shadow: inset 400px 0 0 0 #00CF97; }
+    .homeNosotros .homeNosotros__text .homeNosotros__btn:hover a i {
+      color: #3B3B3B; }
   .homeNosotros .homeNosotros__logo {
     min-width: 250px;
     min-height: 300px;
-    width: 400px;
-    height: 500px;
     background: url(../../assets/Logo-sin-fondo/Isologotipo-04-cortado.png) no-repeat;
     background-size: contain;
     background-position: center;
     margin-bottom: 30px;
     border-radius: 5px; }
+
+.homeNewsLetter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 10px;
+  text-align: center;
+  margin-bottom: 30px;
+  background: #f3f3f3;
+  border-bottom: 2px solid #D64E3D; }
+  .homeNewsLetter .hNUpTitle,
+  .homeNewsLetter .hNSubTitle {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    color: #727171; }
+  .homeNewsLetter .hNTitle {
+    font-size: clamp(3rem, 5vw, 3.4rem);
+    color: #3B3B3B;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif; }
+  .homeNewsLetter .hNSubTitle span {
+    color: black;
+    letter-spacing: 2px; }
+  .homeNewsLetter .hNForm {
+    margin-top: 30px; }
+    .homeNewsLetter .hNForm input {
+      width: 250px;
+      margin-bottom: 25px;
+      font-family: "Poppins", sans-serif; }
+    .homeNewsLetter .hNForm .btn {
+      background: transparent;
+      margin-top: 20px;
+      outline: none;
+      border: none;
+      border: solid 1px #3B3B3B;
+      border-radius: 5px;
+      padding: 15px 25px;
+      display: inline-block;
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: inset 15px 0 0 0 #D64E3D;
+      transition: ease-out .4s;
+      width: 175px;
+      text-transform: uppercase; }
+    .homeNewsLetter .hNForm .btn:hover {
+      box-shadow: inset 400px 0 0 0 #D64E3D;
+      color: #f3f3f3; }
 
 @media screen and (min-width: 992px) {
   .infoOferts {
@@ -345,4 +460,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row-reverse; } }
+    flex-direction: row-reverse; }
+    .homeNosotros__container .homeNosotros__logo {
+      width: 400px;
+      height: 500px; }
+  .homeNewsLetter .hNUpTitle {
+    margin-top: 50px; }
+  .homeNewsLetter .hNForm input {
+    width: 400px; }
+  .homeNewsLetter .hNForm .btn {
+    margin-top: 40px; } }
