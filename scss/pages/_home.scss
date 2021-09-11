@@ -174,7 +174,7 @@
 
 .homeNewsLetter {
     @include flex(space-around, column, center);
-    padding: 20px 10px;
+    padding: 30px 10px;
     text-align: center;
     margin-bottom: 30px;
     background: #f3f3f3;
@@ -214,6 +214,7 @@
         .btn {
             background: transparent;
             margin-top: 20px;
+            margin-bottom: 40px;
             outline: none;
             border: none;
             border: solid 1px #3B3B3B;

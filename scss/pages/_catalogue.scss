@@ -1,0 +1,63 @@
+.catalogueHeader {
+    background: linear-gradient(
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.8)
+        ),
+        url(../../assets/catalgueheaderbg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    margin-top: 20px;
+
+    .container {
+        @include flex(space-around, column, center);
+        font-family: $mont-font;
+        text-align: center;
+
+        .catalogueHeader__title {
+            margin-top: 60px;
+            font-size: clamp(3rem, 5vw, 6rem);
+            text-transform: uppercase;
+            color: #f3f3f3;
+        }
+
+        .catalogueHeader__subtitle {
+            margin-top: 20px;
+            letter-spacing: 1px;
+            font-size: clamp(1.3rem, 5vw, 2rem);
+        }
+    }
+}
+
+.catalogue__products {
+    background: #f3f3f3;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    .container {
+        margin-top: 50px;
+        padding-top: 25px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .card {
+            margin: 20px 20px;
+            max-width: 300px;
+            display: inline-block;
+            cursor: pointer;
+            padding: 10px;
+            font-family: $poppins-font;
+
+            h5 {
+                font-size: clamp(1rem, 5vw, 1.2rem);
+            }
+        }
+    }
+
+}
