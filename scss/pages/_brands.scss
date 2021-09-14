@@ -1,0 +1,129 @@
+.brandsContainer {
+    background: #f3f3f3;
+    padding: 30px 0;
+
+    .container {
+
+        .brand {
+            padding: 10px 7px;
+            font-family: $mont-font;
+            box-shadow: 0px 30px 40px -20px hsl(229, 6%, 66%);
+            border-radius: 15px;
+            margin-bottom: 30px;
+            background: #3b3b3b;
+
+            
+            .card-body {
+                text-align: center;
+                color: white;
+                .card-title {
+                    font-size: clamp(1.5rem, 5vw, 4rem);
+                    letter-spacing: 1.5px;
+                }
+
+                .btn {
+                    background: #FFE5DB;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-family: $roboto-font;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    letter-spacing: 1.5px;
+                    transition: all .4s ease;
+                    margin-top: 20px;
+                }
+
+                .btn:hover {
+                    background: #E59F91;
+                    letter-spacing: 2px;
+                }
+            }
+
+            .imgBox {
+                padding-bottom: 15px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .container {
+
+        .brand{
+            background: #3b3b3b;
+            margin-bottom: 50px;
+
+            .rowContainer {
+                @include flex(space-around, row, center);
+
+                .bodyContainer {
+                    @include flex(space-around, row, center);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 300px;
+                    color: white;
+                    border-radius: 10px;
+                }
+    
+                .imgBox {
+                    max-width: 350px;
+                    padding-right: 15px;
+                }
+    
+                #bodyContainer1 {
+                    background: linear-gradient(
+                        rgba(0,0,0,0.3),
+                        rgba(0,0,0,0.5)
+                        ), url(https://cdn-images.article.com/products/SKU454/2890x1500/image56140.jpg?fit=max&w=1370&q=80&fm=webp);
+                    background-position: center center;
+                }
+
+                #bodyContainer2 {
+                    background: linear-gradient(
+                        rgba(0,0,0,0.3),
+                        rgba(0,0,0,0.5)
+                        ), url(https://cdn-images.article.com/products/SKU337B/2890x1500/image73380.jpg?fit=max&w=1370&q=80&fm=webp);
+                    background-position: center center;
+                }
+
+                #bodyContainer3 {
+                    background: linear-gradient(
+                        rgba(0,0,0,0.3),
+                        rgba(0,0,0,0.5)
+                        ), url(https://cdn-images.article.com/products/SKU12196/2890x1500/image54242.jpg?fit=max&w=1370&q=80&fm=webp);
+                    background-position: center center;
+                }
+
+                #bodyContainer4 {
+                    background: linear-gradient(
+                        rgba(0,0,0,0.3),
+                        rgba(0,0,0,0.5)
+                        ), url(https://cdn-images.article.com/products/SKU416/2890x1500/image70572.jpg?fit=max&w=1370&q=80&fm=webp);
+                    background-position: center center;
+                }
+
+                #bodyContainer5 {
+                    background: linear-gradient(
+                        rgba(0,0,0,0.3),
+                        rgba(0,0,0,0.5)
+                        ), url(https://cdn-images.article.com/products/SKU423A/2890x1500/image56955.jpg?fit=max&w=1370&q=80&fm=webp);
+                    background-position: center center;
+                }
+
+                #bodyContainer6 {
+                    background: linear-gradient(
+                        rgba(0,0,0,0.3),
+                        rgba(0,0,0,0.5)
+                        ), url(https://cdn-images.article.com/products/SKU2509/2890x1500/image48864.jpg?fit=max&w=1370&q=80&fm=webp);
+                    background-position: center center;
+                }
+            }
+            
+        }
+    }
+}

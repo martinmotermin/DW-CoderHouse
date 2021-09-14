@@ -473,7 +473,7 @@
     margin-top: 40px; } }
 
 .catalogueHeader {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url(../../assets/catalgueheaderbg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url(../assets/catalgueheaderbg.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -519,3 +519,78 @@
       font-family: "Poppins", sans-serif; }
       .catalogue__products .container .card h5 {
         font-size: clamp(1rem, 5vw, 1.2rem); }
+
+.brandsContainer {
+  background: #f3f3f3;
+  padding: 30px 0; }
+  .brandsContainer .container .brand {
+    padding: 10px 7px;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 30px 40px -20px #a3a5ae;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    background: #3b3b3b; }
+    .brandsContainer .container .brand .card-body {
+      text-align: center;
+      color: white; }
+      .brandsContainer .container .brand .card-body .card-title {
+        font-size: clamp(1.5rem, 5vw, 4rem);
+        letter-spacing: 1.5px; }
+      .brandsContainer .container .brand .card-body .btn {
+        background: #FFE5DB;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        transition: all .4s ease;
+        margin-top: 20px; }
+      .brandsContainer .container .brand .card-body .btn:hover {
+        background: #E59F91;
+        letter-spacing: 2px; }
+    .brandsContainer .container .brand .imgBox {
+      padding-bottom: 15px; }
+      .brandsContainer .container .brand .imgBox img {
+        width: 100%; }
+
+@media screen and (min-width: 992px) {
+  .container .brand {
+    background: #3b3b3b;
+    margin-bottom: 50px; }
+    .container .brand .rowContainer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row; }
+      .container .brand .rowContainer .bodyContainer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+        color: white;
+        border-radius: 10px; }
+      .container .brand .rowContainer .imgBox {
+        max-width: 350px;
+        padding-right: 15px; }
+      .container .brand .rowContainer #bodyContainer1 {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(https://cdn-images.article.com/products/SKU454/2890x1500/image56140.jpg?fit=max&w=1370&q=80&fm=webp);
+        background-position: center center; }
+      .container .brand .rowContainer #bodyContainer2 {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(https://cdn-images.article.com/products/SKU337B/2890x1500/image73380.jpg?fit=max&w=1370&q=80&fm=webp);
+        background-position: center center; }
+      .container .brand .rowContainer #bodyContainer3 {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(https://cdn-images.article.com/products/SKU12196/2890x1500/image54242.jpg?fit=max&w=1370&q=80&fm=webp);
+        background-position: center center; }
+      .container .brand .rowContainer #bodyContainer4 {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(https://cdn-images.article.com/products/SKU416/2890x1500/image70572.jpg?fit=max&w=1370&q=80&fm=webp);
+        background-position: center center; }
+      .container .brand .rowContainer #bodyContainer5 {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(https://cdn-images.article.com/products/SKU423A/2890x1500/image56955.jpg?fit=max&w=1370&q=80&fm=webp);
+        background-position: center center; }
+      .container .brand .rowContainer #bodyContainer6 {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(https://cdn-images.article.com/products/SKU2509/2890x1500/image48864.jpg?fit=max&w=1370&q=80&fm=webp);
+        background-position: center center; } }
