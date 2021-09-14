@@ -552,7 +552,8 @@
     .brandsContainer .container .brand .imgBox {
       padding-bottom: 15px; }
       .brandsContainer .container .brand .imgBox img {
-        width: 100%; }
+        width: 100%;
+        border-radius: 15px; }
 
 @media screen and (min-width: 992px) {
   .container .brand {
@@ -594,3 +595,91 @@
       .container .brand .rowContainer #bodyContainer6 {
         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(https://cdn-images.article.com/products/SKU2509/2890x1500/image48864.jpg?fit=max&w=1370&q=80&fm=webp);
         background-position: center center; } }
+
+.aboutContainer {
+  margin: 30px auto;
+  background: url(../assets/nosotrosBG.svg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 20px 0; }
+  .aboutContainer .container .card {
+    padding: 20px 15px;
+    background: transparent;
+    border: none; }
+    .aboutContainer .container .card .imgBox {
+      text-align: center; }
+    .aboutContainer .container .card .card-body {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column; }
+
+#contactPage {
+  background: white; }
+  #contactPage .contactContainer {
+    padding: 30px 0;
+    margin-bottom: 20px;
+    background: url(../assets/homeNosotrosBg.svg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center; }
+    #contactPage .contactContainer h1 {
+      font-family: "Montserrat", sans-serif;
+      font-size: clamp(2rem, 5vw, 4rem);
+      margin-bottom: 50px; }
+    #contactPage .contactContainer .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-evenly; }
+    #contactPage .contactContainer form {
+      font-family: "Montserrat", sans-serif;
+      flex-grow: 2; }
+      #contactPage .contactContainer form input,
+      #contactPage .contactContainer form select,
+      #contactPage .contactContainer form textarea,
+      #contactPage .contactContainer form .form-group {
+        max-width: 450px; }
+      #contactPage .contactContainer form textarea {
+        height: 200px; }
+      #contactPage .contactContainer form .contactBtnContainer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        margin: 20px 0; }
+        #contactPage .contactContainer form .contactBtnContainer .btn {
+          margin-bottom: 10px;
+          text-transform: uppercase;
+          font-family: "Poppins", sans-serif;
+          max-width: 150px;
+          padding: 10px 35px;
+          background: #FFE5DB;
+          letter-spacing: 1px;
+          transition: all .4s ease; }
+        #contactPage .contactContainer form .contactBtnContainer .btn:hover {
+          background: #E59F91;
+          letter-spacing: 2px; }
+      #contactPage .contactContainer form input {
+        margin-bottom: 10px; }
+      #contactPage .contactContainer form select {
+        margin-bottom: 20px; }
+  #contactPage #navigationContact {
+    margin-bottom: 20px; }
+  #contactPage .contactData {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 15px 10px;
+    font-family: "Noto Serif JP", serif;
+    width: 400px;
+    align-self: flex-start; }
+    #contactPage .contactData i {
+      margin-right: 10px;
+      font-size: 1.4rem; }
+
+@media screen and (min-width: 756px) {
+  .contactData {
+    margin-left: 20px; } }

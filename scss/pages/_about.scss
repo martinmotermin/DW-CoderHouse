@@ -1,0 +1,24 @@
+.aboutContainer {
+    margin: 30px auto;
+    background: url(../assets/nosotrosBG.svg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 20px 0;
+
+    .container {
+
+        .card {
+            padding: 20px 15px;
+            background: transparent;
+            border: none;
+
+            .imgBox{
+                text-align: center
+            }
+
+            .card-body {
+                @include flex(space-around, column, center);
+            }
+        }
+    }
+}

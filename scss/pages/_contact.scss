@@ -1,0 +1,97 @@
+#contactPage {
+    background: white;
+
+    .contactContainer {
+        padding: 30px 0;
+        margin-bottom: 20px;
+        background: url(../assets/homeNosotrosBg.svg) no-repeat;
+        background-position: center center;
+        background-size: cover;
+        text-align: center;
+
+        h1 {
+            font-family: $mont-font;
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 50px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        
+        form {
+    
+            font-family: $mont-font;
+            flex-grow: 2;
+    
+            input,
+            select,
+            textarea,
+            .form-group {
+                max-width: 450px;
+            }
+    
+            textarea {
+                height: 200px;
+            }
+    
+            .contactBtnContainer {
+                @include flex(space-around, row, center);
+                margin: 20px 0;
+    
+                .btn {
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                    font-family: $poppins-font;
+                    max-width: 150px;
+                    padding: 10px 35px;
+                    background: #FFE5DB;
+                    letter-spacing: 1px;
+                    transition: all .4s ease;
+                }
+
+                .btn:hover {
+                    background: #E59F91;
+                    letter-spacing: 2px;
+                }
+            }
+    
+            input {
+                margin-bottom: 10px;
+            }
+    
+            select {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    #navigationContact{
+        margin-bottom: 20px;
+    }
+
+    .contactData {
+        @include flex(space-around, column, flex-start);
+        padding: 15px 10px;
+        font-family: $noto-font;
+        width: 400px;
+        align-self: flex-start;
+
+        i {
+            margin-right: 10px;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media screen and (min-width: 756px) {
+
+    .contactData {
+        margin-left: 20px;
+    }
+}
+
