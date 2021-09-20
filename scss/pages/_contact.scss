@@ -52,6 +52,12 @@
                     background: #FFE5DB;
                     letter-spacing: 1px;
                     transition: all .4s ease;
+                    outline: none;
+                    border: none;
+
+                    p{
+                        margin: 0;
+                    }
                 }
 
                 .btn:hover {

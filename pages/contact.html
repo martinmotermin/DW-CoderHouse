@@ -12,6 +12,9 @@
     <!--Custom CSS-->
     <link rel="stylesheet" href="../css/styles.css">
 
+    <!--Animate Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 
     <title>Contacto - Lontana Deco.</title>
 </head>
@@ -47,9 +50,9 @@
         </div>
 
         <div class="contactContainer container-fluid">
-            <h1>Contactanos!</h1>
-            <div class="container">
-                <form>
+            <h1 class="wow animate__animated animate__fadeInDown">Contáctanos!</h1>
+            <div class="container overflow-hidden">
+                <form class="wow animate__animated animate__fadeInLeft">
                     <div class="form-group">
                         <input type="text" class="form-control" id="firstName" placeholder="Nombre">
                     </div>
@@ -80,12 +83,29 @@
                     </div>
                     <div class="form-group">
                         <div class="contactBtnContainer row">
-                            <input class="btn" type="reset" value="Resetear">
-                            <input class="btn" type="submit" value="Enviar">
+                            <button type="reset" class="btn">Resetear</button>
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar</button>
+
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Mensaje enviado!</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <p>Gracias por comunicarte con nosotros, te responderemos en las proximas 24h!</p>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn" data-bs-dismiss="modal"><p class="text-dark">Cerrar</p></button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                         </div>
                     </div>
                 </form>
-                <div class="contactData">
+                <div class="contactData wow animate__animated animate__fadeInUp">
                     <div class="phone"><i class="bi bi-telephone"></i>2302453223</div>
                     <div class="wpp"><i class="bi bi-whatsapp"></i>23025423456</div>
                     <div class="mail"><i class="bi bi-envelope"></i>lontanadeco@gmail.com</div>
@@ -110,5 +130,11 @@
     <!--BS Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"     crossorigin="anonymous"></script>
+
+    <!--Wow Js Scripts-->
+    <script src="https://wowjs.uk/dist/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 </body>
 </html>

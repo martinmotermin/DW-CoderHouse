@@ -12,6 +12,9 @@
     <!--Custom CSS-->
     <link rel="stylesheet" href="../css/styles.css">
 
+    <!--Animate Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 
     <title>Lontana Deco</title>
 </head>
@@ -46,8 +49,8 @@
             <div class="container bg-light"><a href="../index.html">Home</a><span>><a href="./brands.html">Marcas</a><span>></span></div>
         </div>
         <div class="brandsContainer container-fluid">
-            <div class="container">
-                <div class="brand card">
+            <div class="container overflow-hidden">
+                <div class="brand card wow animate__animated animate__fadeInLeft">
                     <div class="row g-0 rowContainer">
                       <div class="imgBox col-md-4">
                         <img src="../assets/brands/apparatus.jpg" class="img-fluid " alt="apparatus">
@@ -60,7 +63,7 @@
                       </div>
                     </div>
                 </div>
-                <div class="brand card">
+                <div class="brand card wow animate__animated animate__fadeInRight">
                     <div class="row g-0 rowContainer">
                       <div class="imgBox col-md-4">
                         <img src="../assets/brands/article.jpg" class="img-fluid " alt="article">
@@ -73,7 +76,7 @@
                       </div>
                     </div>
                 </div>
-                <div class="brand card">
+                <div class="brand card wow animate__animated animate__fadeInLeft">
                     <div class="row g-0 rowContainer">
                       <div class="imgBox col-md-4">
                         <img src="../assets/brands/brand4.png" class="img-fluid " alt="luxdeco">
@@ -86,7 +89,7 @@
                       </div>
                     </div>
                 </div>
-                <div class="brand card">
+                <div class="brand card wow animate__animated animate__fadeInRight">
                     <div class="row g-0 rowContainer">
                       <div class="imgBox col-md-4">
                         <img src="../assets/brands/brand5.jpg" class="img-fluid " alt="eichh">
@@ -99,7 +102,7 @@
                       </div>
                     </div>
                 </div>
-                <div class="brand card">
+                <div class="brand card wow animate__animated animate__fadeInLeft">
                     <div class="row g-0 rowContainer">
                       <div class="imgBox col-md-4">
                         <img src="../assets/brands/brand6.jpg" class="img-fluid " alt="bernhardt">
@@ -112,7 +115,7 @@
                       </div>
                     </div>
                 </div>
-                <div class="brand card">
+                <div class="brand card wow animate__animated animate__fadeInRight">
                     <div class="row g-0 rowContainer">
                       <div class="imgBox col-md-4">
                         <img src="../assets/brands/thecity.jpg" class="img-fluid " alt="thecity">
@@ -132,10 +135,23 @@
             <div class="hNUpTitle">NEWSLETTER</div>
             <div class="hNTitle">Suscribite</div>
             <div class="hNSubTitle">Dejanos tus datos y mantenete al día sobre <span>Lontana Deco</span>.</div>
-            <div class="hNForm">
+            <div class="hNForm wow animate__animated animate__flipInX">
               <input type="text" name="" id="" class="form-control" placeholder="NOMBRE">
               <input type="email" class="form-control" id="" placeholder="EMAIL">
-              <button class="btn" type="submit">Enviar</button>
+              <button class="btn" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar</button>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Gracias por suscribirte!</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         <div class="footer container-fluid">
@@ -155,5 +171,11 @@
     <!--BS Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"     crossorigin="anonymous"></script>
+
+    <!--Wow Js Scripts-->
+    <script src="https://wowjs.uk/dist/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 </body>
 </html>

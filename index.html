@@ -12,6 +12,10 @@
     <!--Custom CSS-->
     <link rel="stylesheet" href="./css/styles.css">
 
+    <!--Animate Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
 
     <title>Lontana Deco</title>
 </head>
@@ -59,28 +63,28 @@
         </div>
         <div class="headerInfo">
           <div class="container infoItems">
-            <div class="item item1"><i class="bi bi-currency-dollar"></i><h6>Descuentos abonando en Efectivo o Transferencia</h6></div>
-            <div class="item item2"><i class="bi bi-credit-card"></i><h6>Hasta 12 cuotas sin interés</h6></div>
-            <div class="item item3"><i class="bi bi-truck"></i><h6>Envíos gratis a todo el país</h6></div>
+            <div class="item item1 wow animate__animated animate__fadeIn"><i class="bi bi-currency-dollar"></i><h6>Descuentos abonando en Efectivo o Transferencia</h6></div>
+            <div class="item item2 wow animate__animated animate__fadeIn"><i class="bi bi-credit-card"></i><h6>Hasta 12 cuotas sin interés</h6></div>
+            <div class="item item3 wow animate__animated animate__fadeIn"><i class="bi bi-truck"></i><h6>Envíos gratis a todo el país</h6></div>
           </div>
         </div>
-        <div class="infoOferts container-fluid">
+        <div class="infoOferts container-fluid overflow-hidden">
 
-          <div class="ofert cashOfert">
+          <div class="ofert cashOfert wow animate__animated animate__fadeInLeft">
               <h1 class="ofertTitle">20% OFF</h1>
               <h3 class="ofertSubTitle">En Efectivo o Transferencia.</h3>
           </div>
-          <div class="ofert cardOfert">
+          <div class="ofert cardOfert wow animate__animated animate__fadeInRight">
               <h1 class="ofertTitle">AHORA 12</h1>
               <h3 class="ofertSubTitle">Con cualquier tarjeta.</h3>
           </div>
 
-          <div class="btnContainer">
+          <div class="btnContainer wow animate__animated animate__fadeInUp">
             <button class="draw-border"><a href="./pages/catalogue.html">ACCEDE AL CATALOGO</a></button>
           </div>
         </div>
         <div class="homeNosotros container-fluid">
-          <div class="homeNosotros__container container">
+          <div class="homeNosotros__container container wow animate__animated animate__fadeIn">
             <div class="homeNosotros__logo"></div>
             <div class="homeNosotros__text">
               <h2>Conocé quien está detras de <span>Lontana</span>.</h2>
@@ -95,10 +99,23 @@
           <div class="hNUpTitle">NEWSLETTER</div>
           <div class="hNTitle">Suscribite</div>
           <div class="hNSubTitle">Dejanos tus datos y mantenete al día sobre <span>Lontana Deco</span>.</div>
-          <div class="hNForm">
+          <div class="hNForm wow animate__animated animate__flipInX">
             <input type="text" name="" id="" class="form-control" placeholder="NOMBRE">
             <input type="email" class="form-control" id="" placeholder="EMAIL">
-            <button class="btn" type="submit">Enviar</button>
+            <button class="btn" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Gracias por suscribirte!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="footer container-fluid">
@@ -118,5 +135,11 @@
     <!--BS Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"     crossorigin="anonymous"></script>
+
+    <!--Wow Js Scripts-->
+    <script src="https://wowjs.uk/dist/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 </body>
 </html>

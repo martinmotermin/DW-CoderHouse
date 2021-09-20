@@ -657,7 +657,11 @@
           padding: 10px 35px;
           background: #FFE5DB;
           letter-spacing: 1px;
-          transition: all .4s ease; }
+          transition: all .4s ease;
+          outline: none;
+          border: none; }
+          #contactPage .contactContainer form .contactBtnContainer .btn p {
+            margin: 0; }
         #contactPage .contactContainer form .contactBtnContainer .btn:hover {
           background: #E59F91;
           letter-spacing: 2px; }
