@@ -612,7 +612,12 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      flex-direction: column; }
+      flex-direction: column;
+      font-family: "Montserrat", sans-serif; }
+      .aboutContainer .container .card .card-body h5 {
+        font-size: 2rem; }
+      .aboutContainer .container .card .card-body p {
+        font-size: 1rem; }
 
 #contactPage {
   background: white; }
