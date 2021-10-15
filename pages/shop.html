@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--SEO meta tags-->
+    <meta
+      name="description"
+      content="Decorating your home has never been easier with a website. Enter now and discover the latest in decoration"
+    />
+    <meta
+      name="keywords"
+      content="Decorate your home, Deco Store, Deco, Home Design."
+    />
+
+    <!--BS CDN-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <!--BS Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <!--Animate Link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <title>Lontana Deco</title>
+  </head>
+  <body>
+    <div class="primary-container container-fluid">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="./index.html"
+          ><img
+            src="../assets/Logo-sin-fondo/Isologotipo-06-cortado.png"
+            alt="logo-lontana"
+          />
+          <p>Lontana Deco.</p></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Marcas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >Carrito<i class="bi bi-cart2"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="catalogueHeader container-fluid overflow-hidden">
+        <div class="container wow animate__animated animate__fadeInDown">
+          <h1 class="catalogueHeader__title">Shop</h1>
+          <h6 class="catalogueHeader__subtitle">
+            Aqui podras comprar nuestros productos!
+          </h6>
+        </div>
+      </div>
+      <div class="catalogue__products container-fluid">
+        <div class="container overflow-hidden" id="productsContainer"></div>
+      </div>
+    </div>
+    <!--BS Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
+
+    <!--Custom Script-->
+    <script src="../js/app.js"></script>
+    <script src="../js/products.js"></script>
+
+    <!--Wow Js Scripts-->
+    <script src="https://wowjs.uk/dist/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>
