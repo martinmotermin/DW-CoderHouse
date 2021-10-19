@@ -1,0 +1,10 @@
+#cart-container {
+  .cart-card {
+    @include flex(row, space-around, center);
+    width: 400px;
+
+    img {
+      max-width: 100px;
+    }
+  }
+}

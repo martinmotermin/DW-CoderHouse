@@ -10,9 +10,10 @@
 @import 'layout/footer';
 
 // PAGES
-@import 'pages/home';
-@import 'pages/catalogue';
-@import 'pages/brands';
-@import 'pages/about';
-@import 'pages/contact';
-
+@import './pages/shop';
+@import './pages/catalogue';
+@import './pages/brands';
+@import './pages/about';
+@import './pages/contact';
+@import './pages/cart';
+@import './pages/home';

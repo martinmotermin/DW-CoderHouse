@@ -1,286 +1,272 @@
 .primary-container {
-    height: 100vh;
-    background: #DADDE2;
-    padding: 0;
+  height: 100vh;
+  background: #dadde2;
+  padding: 0;
 }
 
 .infoOferts {
-    position: relative;
-    margin-top: 20px;
-    min-height: 700px;
-    max-height: 700px;
-    background: #000;
-    background: linear-gradient(
-        rgba(0,0,0,0.3),
-        rgba(0,0,0,0.8)
-        ),
-        url(../assets/ofertsBg.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 30px 10px;
+  position: relative;
+  margin-top: 20px;
+  min-height: 700px;
+  max-height: 700px;
+  background: #000;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+    url(../assets/ofertsBg.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 10px;
+  @include flex(space-around, column, center);
+
+  .ofert {
     @include flex(space-around, column, center);
+    font-family: $poppins-font;
+    text-align: center;
 
-    .ofert {
-        @include flex(space-around, column, center);
-        font-family: $poppins-font;
-        text-align: center;
-
-        h1 {
-            font-size: clamp(4.5rem, 5vw, 6rem);
-            font-weight: bolder;
-            margin-bottom: 20px;
-            color: transparent;
-            opacity: 0.8;
-            background-clip: text;
-            -webkit-background-clip: text;
-            background-size: 500%;
-            -webkit-background-size: 500%;
-            animation: animate 5s linear infinite;
-            background-image: linear-gradient(to left, #3F1D3F, #B17AB5, #E7A623);
-        }
-
-        // TEXT ANIMATION
-
-        @keyframes animate {
-            0% {
-              background-position: 0 100%;
-            }
-            50% {
-              background-position: 100% 0;
-            }
-            100% {
-              background-position: 0 100%;
-            }
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            color: #f3f3f3;
-            opacity: 0.9;
-            text-transform: uppercase;
-        }
-
+    h1 {
+      font-size: clamp(4.5rem, 5vw, 6rem);
+      font-weight: bolder;
+      margin-bottom: 20px;
+      color: transparent;
+      opacity: 0.8;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-size: 500%;
+      -webkit-background-size: 500%;
+      animation: animate 5s linear infinite;
+      background-image: linear-gradient(to left, #3f1d3f, #b17ab5, #e7a623);
     }
 
-    .btnContainer {
-        .draw-border {
-            @include btn-border-drawing(#55BAC0, #ffe593, 4px, bottom, right);
-          }
-        button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            line-height: 1.5;
-            font: $roboto-font;
-            font-weight: bold;
-            padding: 1em 2em;
-            letter-spacing: 0.05rem;
-            font-size: 1rem;
+    // TEXT ANIMATION
 
-            a {
-                text-decoration: none;
-                color: #55BAC0;
-            }
-        }
-        button:focus {
-            outline: 2px dotted #55BAC0; 
-        }
-
-        button:hover {
-
-            a {
-                color: #ffe593;
-            }
-        }
+    @keyframes animate {
+      0% {
+        background-position: 0 100%;
+      }
+      50% {
+        background-position: 100% 0;
+      }
+      100% {
+        background-position: 0 100%;
+      }
     }
+
+    h3 {
+      font-size: 1.5rem;
+      color: #f3f3f3;
+      opacity: 0.9;
+      text-transform: uppercase;
+    }
+  }
+
+  .btnContainer {
+    .draw-border {
+      @include btn-border-drawing(#55bac0, #ffe593, 4px, bottom, right);
+    }
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      line-height: 1.5;
+      font: $roboto-font;
+      font-weight: bold;
+      padding: 1em 2em;
+      letter-spacing: 0.05rem;
+      font-size: 1rem;
+
+      a {
+        text-decoration: none;
+        color: #55bac0;
+      }
+    }
+    button:focus {
+      outline: 2px dotted #55bac0;
+    }
+
+    button:hover {
+      a {
+        color: #ffe593;
+      }
+    }
+  }
 }
 
 .homeNosotros {
-    position: relative;
-    padding: 75px 0;
-    background: url(../assets/homeNosotrosBg.svg) no-repeat;
+  position: relative;
+  padding: 75px 0;
+  background: url(../assets/homeNosotrosBg.svg) no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .homeNosotros__text {
+    h2 {
+      font-family: $mont-font;
+      font-size: clamp(2rem, 5vw, 3rem);
+
+      span {
+        color: $orange-color;
+      }
+    }
+
+    h6 {
+      font-family: $poppins-font;
+      font-size: 1rem;
+    }
+
+    .homeNosotros__btn {
+      background: transparent;
+      margin-top: 40px;
+      outline: none;
+      border: none;
+      border: solid 1px #3b3b3b;
+      border-radius: 5px;
+      padding: 15px 25px;
+      display: inline-block;
+      font-family: $roboto-font;
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: inset 15px 0 0 0 #00cf97;
+      transition: ease-out 0.4s;
+
+      a {
+        text-decoration: none;
+        color: #3b3b3b;
+        text-transform: uppercase;
+
+        i {
+          margin-left: 10px;
+          color: $orange-color;
+        }
+      }
+    }
+
+    .homeNosotros__btn:hover {
+      box-shadow: inset 400px 0 0 0 #00cf97;
+
+      a {
+        i {
+          color: #3b3b3b;
+        }
+      }
+    }
+  }
+
+  .homeNosotros__logo {
+    min-width: 250px;
+    min-height: 300px;
+    background: url(../assets/Logo-sin-fondo/Isologotipo-04-cortado.png)
+      no-repeat;
+    background-size: contain;
     background-position: center;
-    background-size: cover;
-
-    .homeNosotros__text{
-
-        h2 {
-            font-family: $mont-font;
-            font-size: clamp(2rem, 5vw, 3rem);
-
-            span {
-                color: $orange-color;
-            }
-        }
-
-        h6 {
-            font-family: $poppins-font;
-            font-size: 1rem;
-        }
-
-        .homeNosotros__btn {
-            background: transparent;
-            margin-top: 40px;
-            outline: none;
-            border: none;
-            border: solid 1px #3B3B3B;
-            border-radius: 5px;
-            padding: 15px 25px;
-            display: inline-block;
-            font-family: $roboto-font;
-            font-weight: bold;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            cursor: pointer;
-            box-shadow: inset 15px 0 0 0 #00CF97;
-            transition: ease-out .4s;
-
-            a {
-                text-decoration: none;
-                color: #3B3B3B;
-                text-transform: uppercase;
-
-                i {
-                    margin-left: 10px;
-                    color: $orange-color;
-                }
-            }
-        }
-
-        .homeNosotros__btn:hover {
-            box-shadow: inset 400px 0 0 0 #00CF97;
-
-            a {
-
-                i {
-                    color: #3B3B3B;
-                }
-            }
-        }
-    }
-
-    .homeNosotros__logo {
-        min-width: 250px;
-        min-height: 300px;
-        background: url(../assets/Logo-sin-fondo/Isologotipo-04-cortado.png) no-repeat;
-        background-size: contain;
-        background-position: center;
-        margin-bottom: 30px;
-        border-radius: 5px;
-    }
+    margin-bottom: 30px;
+    border-radius: 5px;
+  }
 }
 
 .homeNewsLetter {
-    @include flex(space-around, column, center);
-    padding: 30px 10px;
-    text-align: center;
-    margin-bottom: 30px;
-    background: #f3f3f3;
-    border-bottom: 2px solid $orange-color;
+  @include flex(space-around, column, center);
+  padding: 30px 10px;
+  text-align: center;
+  margin-bottom: 30px;
+  background: #f3f3f3;
+  border-bottom: 2px solid $orange-color;
 
-    .hNUpTitle,
-    .hNSubTitle {
-        font-family: $poppins-font;
-        font-size: 1.2rem;
-        color: #727171;
+  .hNUpTitle,
+  .hNSubTitle {
+    font-family: $poppins-font;
+    font-size: 1.2rem;
+    color: #727171;
+  }
+
+  .hNTitle {
+    font-size: clamp(3rem, 5vw, 3.4rem);
+    color: #3b3b3b;
+    font-weight: bold;
+    font-family: $mont-font;
+  }
+
+  .hNSubTitle {
+    span {
+      color: black;
+      letter-spacing: 2px;
+    }
+  }
+
+  .hNForm {
+    margin-top: 30px;
+
+    input {
+      width: 250px;
+      margin-bottom: 25px;
+      font-family: $poppins-font;
     }
 
-    .hNTitle {
-        font-size: clamp(3rem, 5vw, 3.4rem);
-        color: #3B3B3B;
-        font-weight: bold;
-        font-family: $mont-font;
+    .btn {
+      background: transparent;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      outline: none;
+      border: none;
+      border: solid 1px #3b3b3b;
+      border-radius: 5px;
+      padding: 15px 25px;
+      display: inline-block;
+      font-family: $roboto-font;
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: inset 15px 0 0 0 $orange-color;
+      transition: ease-out 0.4s;
+      width: 175px;
+      text-transform: uppercase;
     }
 
-    .hNSubTitle {
-
-        span {
-            color: black;
-            letter-spacing: 2px;
-        }
+    .btn:hover {
+      box-shadow: inset 400px 0 0 0 $orange-color;
+      color: #f3f3f3;
     }
-
-    .hNForm {
-        margin-top: 30px;
-        
-        input {
-            width: 250px;
-            margin-bottom: 25px;
-            font-family: $poppins-font;
-        }
-
-        .btn {
-            background: transparent;
-            margin-top: 20px;
-            margin-bottom: 40px;
-            outline: none;
-            border: none;
-            border: solid 1px #3B3B3B;
-            border-radius: 5px;
-            padding: 15px 25px;
-            display: inline-block;
-            font-family: $roboto-font;
-            font-weight: bold;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            cursor: pointer;
-            box-shadow: inset 15px 0 0 0 $orange-color;
-            transition: ease-out .4s;
-            width: 175px;
-            text-transform: uppercase;
-        }
-
-        .btn:hover {
-            box-shadow: inset 400px 0 0 0 $orange-color;
-            color: #f3f3f3;
-        }
-    }
-
+  }
 }
-
 
 // MEDIA QUERYS
 
 @media screen and (min-width: 992px) {
+  .infoOferts {
+    @include flex(space-around, row, center);
 
-    .infoOferts {
-        @include flex(space-around, row, center);
+    .btnContainer {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 80px;
+    }
+  }
 
-        .btnContainer {
-            position: absolute;
-            bottom: 0;
-            margin-bottom: 80px;
-        }
+  .homeNosotros__container {
+    @include flex(space-between, row-reverse, center);
+
+    .homeNosotros__logo {
+      width: 400px;
+      height: 500px;
+    }
+  }
+
+  .homeNewsLetter {
+    .hNUpTitle {
+      margin-top: 50px;
     }
 
-    .homeNosotros__container {
-        @include flex(space-between, row-reverse, center);
+    .hNForm {
+      input {
+        width: 400px;
+      }
 
-        .homeNosotros__logo {
-            width: 400px;
-            height: 500px;
-        }
-
+      .btn {
+        margin-top: 40px;
+      }
     }
-
-    .homeNewsLetter {
-        
-        .hNUpTitle {
-            margin-top: 50px;
-        }
-        
-        .hNForm {
-
-            input {
-                width: 400px;
-            }
-
-            .btn {
-                margin-top: 40px;
-            }
-        }
-    }
+  }
 }
-

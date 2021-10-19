@@ -1,0 +1,38 @@
+#productsContainer {
+  .card {
+    font-family: $poppins-font;
+    background: #3b3b3b;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .card-title {
+        text-transform: uppercase;
+      }
+
+      .card-text {
+        font-style: italic;
+      }
+
+      .card-price {
+        align-self: flex-end;
+        font-size: 1.3rem;
+      }
+    }
+
+    .btn {
+      margin: auto;
+      font-family: $roboto-font;
+      font-size: 1.4rem;
+      background: $orange-color;
+      color: white;
+      margin-bottom: 10px;
+    }
+  }
+}
