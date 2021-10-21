@@ -82,7 +82,67 @@
         </div>
       </nav>
       <div class="container-fluid">
-        <div class="container" id="cart-container"></div>
+        <div class="container" id="cart-container">
+          <div class="cart-text" id="cart-text-container">
+            <img src="../assets/cart2.svg" alt="empty-cart" />
+            <h1>Tu carrito esta vacio!</h1>
+            <h3>Comienza a comprar ahora:</h3>
+            <a href="./shop.html"><button class="btn">Shop</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="homeNewsLetter container-fluid">
+        <div class="hNUpTitle">NEWSLETTER</div>
+        <div class="hNTitle">Suscribite</div>
+        <div class="hNSubTitle">
+          Dejanos tus datos y mantenete al día sobre <span>Lontana Deco</span>.
+        </div>
+        <div class="hNForm wow animate__animated animate__flipInX">
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control"
+            placeholder="NOMBRE"
+          />
+          <input type="email" class="form-control" id="" placeholder="EMAIL" />
+          <button
+            class="btn"
+            type="submit"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Enviar
+          </button>
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Gracias por suscribirte!
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn" data-bs-dismiss="modal">
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="footer container-fluid">
         <div class="container">
