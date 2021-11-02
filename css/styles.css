@@ -242,25 +242,25 @@
     .footer .container .socialMedia i {
       margin-left: 20px; } }
 
-#productsContainer .card {
+#productsContainer .store-card {
   font-family: "Poppins", sans-serif;
   background: #3b3b3b;
   color: #f3f3f3;
   display: flex;
   flex-direction: column;
   justify-content: center; }
-  #productsContainer .card .card-body {
+  #productsContainer .store-card .card-body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; }
-    #productsContainer .card .card-body .card-title {
+    #productsContainer .store-card .card-body .card-title {
       text-transform: uppercase; }
-    #productsContainer .card .card-body .card-text {
+    #productsContainer .store-card .card-body .card-text {
       font-style: italic; }
-    #productsContainer .card .card-body .card-price {
+    #productsContainer .store-card .card-body .card-price {
       align-self: flex-end;
       font-size: 1.3rem; }
-  #productsContainer .card .btn {
+  #productsContainer .store-card .btn {
     margin: auto;
     font-family: "Roboto", sans-serif;
     font-size: 1.4rem;
@@ -490,7 +490,14 @@
     margin-left: 20px; } }
 
 #cart-container {
-  padding: 30px; }
+  margin-top: 50px;
+  padding-top: 25px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap; }
   #cart-container .cart-text {
     padding: 40px 0;
     display: flex;
@@ -515,17 +522,27 @@
     align-items: center;
     flex-direction: column;
     background: #f3f3f3;
-    margin: 20px 0;
+    margin: 20px 30px;
     padding: 15px 10px;
-    text-align: center; }
+    text-align: center;
+    max-width: 300px;
+    display: inline-block;
+    padding: 10px; }
     #cart-container .cart-card img {
       max-width: 200px; }
+    #cart-container .cart-card .remove {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: red;
+      color: white; }
     #cart-container .cart-card .quant-container {
       display: flex;
       justify-content: space-around;
       align-items: center;
       flex-direction: row;
-      width: 100px; }
+      width: 100px;
+      margin: auto; }
       #cart-container .cart-card .quant-container .btn {
         background: #D64E3D;
         color: white;

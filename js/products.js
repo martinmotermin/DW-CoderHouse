@@ -1,7 +1,5 @@
 'use strict';
 
-let store = [];
-
 /*
 Categorias: bazar, bano, deco, iluminacion, muebles, sillones y sofa
 */
@@ -751,6 +749,8 @@ const product72 = new Product(
   'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/110/143/products/whatsapp-image-2021-04-22-at-15-27-461-7a23f095b87abb831416191162857765-1024-1024.jpeg'
 );
 
+let store = [];
+
 store.push(
   product1,
   product2,
@@ -830,23 +830,23 @@ store.push(
 localStorage.setItem('Store', JSON.stringify(store));
 const productsContainer = document.getElementById('productsContainer');
 
-store.forEach((el) => {
+const createCard = function (item, container, className) {
   const card = document.createElement('div');
-  card.classList.add('card');
-  card.setAttribute('id', el.id);
+  card.classList.add('card', className);
+  card.setAttribute('id', item.id);
   const cardImg = document.createElement('img');
   cardImg.classList.add('card-img-top');
-  cardImg.setAttribute('src', el.src);
+  cardImg.setAttribute('src', item.src);
   const cardBody = document.createElement('div');
   cardBody.classList.add('card-body');
   const cardTitle = document.createElement('h5');
-  cardTitle.textContent = el.name;
+  cardTitle.textContent = item.name;
   cardTitle.classList.add('card-title');
   const cardText = document.createElement('p');
-  cardText.textContent = el.description;
+  cardText.textContent = item.description;
   cardText.classList.add('card-text');
   const cardPrice = document.createElement('p');
-  cardPrice.textContent = `$${el.price}`;
+  cardPrice.textContent = `$${item.price}`;
   cardPrice.classList.add('card-price');
   const cardBtn = document.createElement('button');
   cardBtn.textContent = 'COMPRAR';
@@ -857,5 +857,9 @@ store.forEach((el) => {
   card.appendChild(cardImg);
   card.appendChild(cardBody);
   card.appendChild(cardBtn);
-  productsContainer.appendChild(card);
+  container.appendChild(card);
+};
+
+store.forEach((el) => {
+  createCard(el, productsContainer, 'store-card');
 });
