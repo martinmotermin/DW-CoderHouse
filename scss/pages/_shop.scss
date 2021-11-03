@@ -1,3 +1,19 @@
+.promoContainer {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .btnPromo {
+    font-family: $roboto-font;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: $orange-color;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+}
 #productsContainer {
   .store-card {
     font-family: $poppins-font;

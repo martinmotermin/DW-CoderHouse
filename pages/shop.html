@@ -73,10 +73,27 @@
             <li class="nav-item">
               <a class="nav-link" href="./contact.html">Contacto</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item cart-li">
+              <span class="cart-indicator"></span>
               <a class="nav-link" href="./cart.html"
                 >Carrito<i class="bi bi-cart2"></i
               ></a>
+              <div>
+                <table id="minicart-list">
+                  <thead>
+                    <tr>
+                      <th>Imagen</th>
+                      <th>Nombre</th>
+                      <th>Precio</th>
+                      <th>Cantidad</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+
+                <button class="btn remove-all">Vaciar Carrito</button>
+              </div>
             </li>
           </ul>
         </div>
@@ -88,6 +105,10 @@
             Aqui podras comprar nuestros productos!
           </h6>
         </div>
+      </div>
+      <div class="promoContainer container">
+        <button class="btn btnPromo">Mostrar PromoCode</button>
+        <div class="promoCode-container"></div>
       </div>
       <div class="catalogue__products container-fluid">
         <div class="container overflow-hidden" id="productsContainer"></div>

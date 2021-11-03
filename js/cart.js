@@ -85,14 +85,14 @@ const quantBtn = function (e) {
 
   if (targetBtn.classList.contains('btn--plus')) {
     cartItems.forEach((item) => {
-      if (item.id === productID) {
+      if (item.id === productID && item.quantity < item.stock) {
         item.quantity++;
         document.getElementById(`q${productID}`).textContent = item.quantity;
       }
     });
   } else if (targetBtn.classList.contains('btn--less')) {
     cartItems.forEach((item) => {
-      if (item.id === productID) {
+      if (item.id === productID && item.quantity > 0) {
         item.quantity--;
         document.getElementById(`q${productID}`).textContent = item.quantity;
       }
@@ -109,5 +109,6 @@ if (cartItems !== []) {
   cartTextContent.style.display = 'block';
 }
 
-cartItemsContainer.addEventListener('click', quantBtn);
-cartItemsContainer.addEventListener('click', removeBtn);
+// cartItemsContainer.addEventListener('click', quantBtn);
+$('#cart-container').click(quantBtn);
+$('#cart-container').click(removeBtn);

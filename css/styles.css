@@ -11,7 +11,7 @@
   margin: 0; }
 
 .navbar {
-  background: #3B3B3B;
+  background: #3b3b3b;
   border-bottom: solid 2px #D64E3D; }
   .navbar a {
     display: flex;
@@ -76,7 +76,7 @@
       color: white;
       text-transform: uppercase; }
     .navbar .navbar-nav .nav-item .nav-link::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       transform: scaleX(0);
@@ -91,6 +91,56 @@
     .navbar .navbar-nav .nav-item .nav-link:hover::after {
       transform: scaleX(1);
       transform-origin: bottom left; }
+    .navbar .navbar-nav .cart-li {
+      position: relative; }
+      .navbar .navbar-nav .cart-li a i {
+        margin-left: 5px; }
+      .navbar .navbar-nav .cart-li .cart-indicator {
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-weight: bolder;
+        position: absolute;
+        top: 0;
+        right: -15px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        color: #D64E3D; }
+      .navbar .navbar-nav .cart-li div {
+        display: none; }
+      .navbar .navbar-nav .cart-li #minicart-list {
+        font-family: "Poppins", sans-serif; }
+        .navbar .navbar-nav .cart-li #minicart-list thead th {
+          padding: 12px 15px;
+          text-align: left;
+          border-bottom: 1px solid #e1e1e1; }
+        .navbar .navbar-nav .cart-li #minicart-list thead th:first-child {
+          padding-left: 0; }
+        .navbar .navbar-nav .cart-li #minicart-list thead th:last-child {
+          padding-right: 0; }
+        .navbar .navbar-nav .cart-li #minicart-list tbody tr td a {
+          text-decoration: none;
+          font-family: "Poppins", sans-serif;
+          color: #D64E3D;
+          font-weight: bolder; }
+    .navbar .navbar-nav .cart-li:hover div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      z-index: 1;
+      background-color: white;
+      padding: 20px;
+      min-height: 400px;
+      min-width: 300px; }
+      .navbar .navbar-nav .cart-li:hover div button {
+        background-color: #D64E3D;
+        width: 150px;
+        color: white; }
 
 .navigation {
   background: white;
@@ -121,7 +171,7 @@
 
 .headerInfo {
   margin-top: 10px;
-  background: #3B3B3B;
+  background: #3b3b3b;
   padding: 10px 0;
   display: flex;
   justify-content: space-around;
@@ -241,6 +291,21 @@
         margin-right: 20px; }
     .footer .container .socialMedia i {
       margin-left: 20px; } }
+
+.promoContainer {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .promoContainer .btnPromo {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: #D64E3D;
+    color: #fff;
+    margin-bottom: 20px; }
 
 #productsContainer .store-card {
   font-family: "Poppins", sans-serif;
