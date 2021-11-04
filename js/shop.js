@@ -5,6 +5,7 @@ const storeContainer = document.getElementById('productsContainer');
 const miniCartContainer = document.querySelector('#minicart-list tbody');
 const cartIndicator = document.querySelector('.cart-indicator');
 let cart;
+const URLJSON = '../data/promo-codes.json';
 
 if (localStorage.getItem('cart') == null) {
   cart = [];
@@ -66,10 +67,12 @@ const buy = function (e) {
 storeContainer.addEventListener('click', buy);
 
 $('.btnPromo').click(() => {
-  let name = prompt('Ingresa tu nombre!');
-  $('.promoCode-container').hide();
-  $('.promoCode-container').prepend(
-    `<h2 classname='promo-code'>${name}${Math.trunc(Math.random() * 3123)}</h2>`
-  );
-  $('.promoCode-container').fadeIn();
+  $.getJSON(URLJSON, (res, rej) => {
+    let dataArray = res;
+    for (const data of dataArray) {
+      $('.promoCode-container').prepend(
+        `<h3 class="promo-code">${data.promocode}</h3>`
+      );
+    }
+  });
 });
