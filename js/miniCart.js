@@ -1,8 +1,8 @@
 'use strict';
-
-let cartItems = JSON.parse(localStorage.getItem('cart'));
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 const miniCartContainer = document.querySelector('#minicart-list tbody');
 const cartIndicator = document.querySelector('.cart-indicator');
+const emptyMiniCartBtn = document.getElementById('remove-all');
 
 function renderMiniCart(arr) {
   if (arr.length > 0) {
@@ -21,11 +21,19 @@ function renderMiniCart(arr) {
           `;
       miniCartContainer.appendChild(row);
     });
+  } else {
+    miniCartContainer.innerHTML = '';
   }
 
   cartIndicator.textContent = arr.length;
 }
 
-if (cartItems.length > 0) {
-  renderMiniCart(cartItems);
+emptyMiniCartBtn.addEventListener('click', () => {
+  cart = [];
+  localStorage.setItem('cart', JSON.stringify(cart));
+  renderMiniCart(cart);
+});
+
+if (cart.length > 0) {
+  renderMiniCart(cart);
 }
