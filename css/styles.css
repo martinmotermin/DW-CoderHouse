@@ -307,6 +307,10 @@
     color: #fff;
     margin-bottom: 20px; }
 
+.filter-container {
+  margin-top: 30px;
+  text-align: center; }
+
 #productsContainer .store-card {
   font-family: "Poppins", sans-serif;
   background: #3b3b3b;
@@ -332,6 +336,10 @@
     background: #D64E3D;
     color: white;
     margin-bottom: 10px; }
+
+#productsContainer .modal .modal-footer .btn a {
+  text-decoration: none;
+  color: white; }
 
 .catalogueHeader {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url(../assets/catalgueheaderbg.jpg);
@@ -573,7 +581,6 @@
       width: 270px;
       margin-bottom: 20px; }
     #cart-container .cart-text .btn {
-      padding: 10px 27px;
       background: #D64E3D;
       color: white;
       text-transform: uppercase;
@@ -590,7 +597,7 @@
     margin: 20px 30px;
     padding: 15px 10px;
     text-align: center;
-    max-width: 300px;
+    width: 300px;
     display: inline-block;
     padding: 10px; }
     #cart-container .cart-card img {
@@ -612,7 +619,7 @@
         background: #D64E3D;
         color: white;
         font-size: 1.2rem;
-        padding: 0;
+        padding: 15px 10px;
         height: 20px;
         display: flex;
         justify-content: center;
@@ -620,10 +627,44 @@
         flex-direction: row; }
       #cart-container .cart-card .quant-container p {
         margin: 0; }
+  #cart-container .cart-total {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 200px; }
 
 @media screen and (min-width: 992px) {
-  #cart-container .cart-text img {
-    width: 600px; } }
+  #cart-container {
+    flex-direction: column; }
+    #cart-container .cart-text img {
+      width: 600px; }
+    #cart-container .cart-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      height: 150px;
+      width: 700px;
+      margin: 5px; }
+      #cart-container .cart-card img {
+        width: 100px; }
+  .cart-total {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 600px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    margin: 20px auto;
+    padding: 30px 10px;
+    background-color: #fff;
+    border-radius: 15px; }
+    .cart-total .pay-btn {
+      padding: 10px 25px;
+      background-color: #D64E3D;
+      color: white; } }
 
 .primary-container {
   height: 100vh;

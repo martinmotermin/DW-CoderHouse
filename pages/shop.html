@@ -110,8 +110,71 @@
         <button class="btn btnPromo">Mostrar PromoCode</button>
         <div class="promoCode-container"></div>
       </div>
+      <div class="filter-container">
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Filtrar por:
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Todo</a></li>
+            <li><a class="dropdown-item" href="#">Bazar</a></li>
+            <li><a class="dropdown-item" href="#">Baño</a></li>
+            <li><a class="dropdown-item" href="#">Deco</a></li>
+            <li><a class="dropdown-item" href="#">Iluminacion</a></li>
+            <li><a class="dropdown-item" href="#">Muebles</a></li>
+            <li><a class="dropdown-item" href="#">Sillones y sofas</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="catalogue__products container-fluid">
-        <div class="container overflow-hidden" id="productsContainer"></div>
+        <div class="container overflow-hidden" id="productsContainer">
+          <div
+            class="modal fade"
+            id="buyModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    El articulo se ha agregado al carrito!
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">Continua comprando o ve al carrito</div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Cerrar
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    <a href="./cart.html">Carrito</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="footer container-fluid">

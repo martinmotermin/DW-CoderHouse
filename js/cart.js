@@ -3,7 +3,11 @@
 let cartItems = JSON.parse(localStorage.getItem('cart'));
 const cartTextContent = document.getElementById('cart-text-container');
 const cartItemsContainer = document.getElementById('cart-container');
+const cartTotalContainer = document.querySelector('.cart-total');
+const totalPriceContainer = document.querySelector('.total-price');
+const totalItemsContainer = document.querySelector('.total-items');
 
+// Create all card buttons for each product
 const createProductBtns = function (item, container) {
   const quantContainer = document.createElement('div');
   quantContainer.classList.add('quant-container');
@@ -28,6 +32,7 @@ const createProductBtns = function (item, container) {
   container.appendChild(quantContainer);
 };
 
+// Create card for a product
 const createCard = function (item, container, className) {
   const card = document.createElement('div');
   card.classList.add('card', className);
@@ -44,8 +49,9 @@ const createCard = function (item, container, className) {
   cardText.textContent = item.description;
   cardText.classList.add('card-text');
   const cardPrice = document.createElement('p');
-  cardPrice.textContent = `$${item.price}`;
+  cardPrice.textContent = `$${item.price * item.quantity}`;
   cardPrice.classList.add('card-price');
+  cardPrice.setAttribute('id', `p-${item.id}`);
 
   cardBody.appendChild(cardTitle);
   cardBody.appendChild(cardText);
@@ -59,14 +65,15 @@ const createCard = function (item, container, className) {
   }
 };
 
+// Delete all HTML elements from any container
 const cleanHTML = function (container) {
   container.innerHTML = '';
 };
 
+// Create remove button for each cart product
 const removeBtn = function (e) {
   const targetBtn = e.target;
   const productID = Number(e.target.parentElement.id);
-  const product = cartItems[productID - 1];
 
   if (targetBtn.classList.contains('remove')) {
     cartItems = cartItems.filter((item) => item.id !== productID);
@@ -76,9 +83,13 @@ const removeBtn = function (e) {
     cartItems.forEach((element) => {
       createCard(element, cartItemsContainer, 'cart-card');
     });
+
+    calcTotalItems(cartItems);
+    calcTotalPrice(cartItems);
   }
 };
 
+// Adds functionality to the addition and subtraction buttons
 const quantBtn = function (e) {
   const targetBtn = e.target;
   const productID = Number(e.target.parentElement.parentElement.id);
@@ -88,27 +99,67 @@ const quantBtn = function (e) {
       if (item.id === productID && item.quantity < item.stock) {
         item.quantity++;
         document.getElementById(`q${productID}`).textContent = item.quantity;
+        document.getElementById(`p-${productID}`).textContent = `$${
+          item.quantity * item.price
+        }`;
       }
     });
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    calcTotalItems(cartItems);
+    calcTotalPrice(cartItems);
   } else if (targetBtn.classList.contains('btn--less')) {
     cartItems.forEach((item) => {
       if (item.id === productID && item.quantity > 0) {
         item.quantity--;
         document.getElementById(`q${productID}`).textContent = item.quantity;
+        document.getElementById(`p-${productID}`).textContent = `$${
+          item.quantity * item.price
+        }`;
       }
     });
+    calcTotalItems(cartItems);
+    calcTotalPrice(cartItems);
+    localStorage.setItem('cart', JSON.stringify(cartItems));
   }
 };
 
+// Calc and render total cart items
+const calcTotalItems = function (arr) {
+  let totalItems = 0;
+  arr.forEach((el) => {
+    totalItems += el.quantity;
+  });
+  totalItemsContainer.textContent = `Productos: ${totalItems}`;
+  return totalItems;
+};
+
+// Calc and render total cart value
+const calcTotalPrice = function (arr) {
+  let totalPrice = 0;
+  const newArr = arr.map((el) => {
+    return el.price * el.quantity;
+  });
+  totalPrice = newArr.reduce((a, b) => a + b, 0);
+  totalPriceContainer.textContent = `Total: $${totalPrice}`;
+  return totalPrice;
+};
+
+// Render cart elements
 if (cartItems !== []) {
   cartTextContent.style.display = 'none';
   cartItems.forEach((element) => {
     createCard(element, cartItemsContainer, 'cart-card');
   });
+  const payBtn = document.createElement('button');
+  payBtn.classList.add('btn', 'pay-btn');
+  payBtn.textContent = 'PAGAR';
+  cartTotalContainer.appendChild(payBtn);
+  calcTotalPrice(cartItems);
+  calcTotalItems(cartItems);
 } else {
   cartTextContent.style.display = 'block';
 }
 
-// cartItemsContainer.addEventListener('click', quantBtn);
+//JQuery events
 $('#cart-container').click(quantBtn);
 $('#cart-container').click(removeBtn);

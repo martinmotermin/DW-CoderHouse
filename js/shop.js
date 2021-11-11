@@ -2,8 +2,10 @@
 
 const storeList = JSON.parse(localStorage.getItem('Store'));
 const storeContainer = document.getElementById('productsContainer');
+const filterContainer = document.querySelector('.filter-container');
 const URLJSON = '../data/promo-codes.json';
 
+// Adds a product to cart
 const buy = function (e) {
   const productID = e.target.parentElement.id;
   const product = storeList[productID - 1];
@@ -32,8 +34,31 @@ const buy = function (e) {
   renderMiniCart(JSON.parse(localStorage.getItem('cart')));
 };
 
+// Filter by selection the list of products
+const filterBtn = function (e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains('dropdown-item')) {
+    const cartFiltred = storeList.filter(
+      (product) => product.category == e.target.textContent
+    );
+    storeContainer.innerHTML = '';
+    cartFiltred.forEach((product) =>
+      createCard(product, storeContainer, 'store-card')
+    );
+    if (e.target.textContent == 'Todo') {
+      storeContainer.innerHTML = '';
+      storeList.forEach((product) =>
+        createCard(product, storeContainer, 'store-card')
+      );
+    }
+  }
+};
+
+// Buy event
 storeContainer.addEventListener('click', buy);
 
+// AJAX call to render a "promo-code"
 $('.btnPromo').click(() => {
   $('.promoCode-container').html('');
   $.getJSON(URLJSON, (res, rej) => {
@@ -45,3 +70,6 @@ $('.btnPromo').click(() => {
     }
   });
 });
+
+// Filter Event
+filterContainer.addEventListener('click', filterBtn);

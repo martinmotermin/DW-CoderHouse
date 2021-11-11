@@ -830,6 +830,7 @@ store.push(
 localStorage.setItem('Store', JSON.stringify(store));
 const productsContainer = document.getElementById('productsContainer');
 
+// Card creation
 const createCard = function (item, container, className) {
   const card = document.createElement('div');
   card.classList.add('card', className);
@@ -851,6 +852,8 @@ const createCard = function (item, container, className) {
   const cardBtn = document.createElement('button');
   cardBtn.textContent = 'COMPRAR';
   cardBtn.classList.add('btn', 'card-btn');
+  cardBtn.setAttribute('data-bs-toggle', 'modal');
+  cardBtn.setAttribute('data-bs-target', '#buyModal');
   cardBody.appendChild(cardTitle);
   cardBody.appendChild(cardText);
   cardBody.appendChild(cardPrice);
@@ -860,6 +863,7 @@ const createCard = function (item, container, className) {
   container.appendChild(card);
 };
 
+// Creates one card for each product of the data base
 store.forEach((el) => {
   createCard(el, productsContainer, 'store-card');
 });

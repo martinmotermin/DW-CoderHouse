@@ -16,7 +16,6 @@
     }
 
     .btn {
-      padding: 10px 27px;
       background: $orange-color;
       color: white;
       text-transform: uppercase;
@@ -35,7 +34,7 @@
     margin: 20px 30px;
     padding: 15px 10px;
     text-align: center;
-    max-width: 300px;
+    width: 300px;
     display: inline-block;
     padding: 10px;
 
@@ -60,7 +59,7 @@
         background: $orange-color;
         color: white;
         font-size: 1.2rem;
-        padding: 0;
+        padding: 15px 10px;
         height: 20px;
         @include flex(center, row, center);
       }
@@ -70,14 +69,44 @@
       }
     }
   }
+  .cart-total {
+    @include flex(space-around, column, center);
+    width: 200px;
+  }
 }
 
 @media screen and (min-width: 992px) {
   #cart-container {
+    flex-direction: column;
     .cart-text {
       img {
         width: 600px;
       }
+    }
+    .cart-card {
+      @include flex(center, row, center);
+      height: 150px;
+      width: 700px;
+      margin: 5px;
+      img {
+        width: 100px;
+      }
+    }
+  }
+  .cart-total {
+    @include flex(space-around, row, center);
+    width: 600px;
+    font-family: $roboto-font;
+    font-size: 1.2rem;
+    margin: 20px auto;
+    padding: 30px 10px;
+    background-color: #fff;
+    border-radius: 15px;
+
+    .pay-btn {
+      padding: 10px 25px;
+      background-color: $orange-color;
+      color: white;
     }
   }
 }
